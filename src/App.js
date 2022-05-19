@@ -1,6 +1,13 @@
+import './App.css';
+// import Login from './pages/login/Login';
+import PropertyPhotos from './components/PropertyPhotos/PropertyPhotos';
+
 function App() {
   return (
-    <div>Hello World</div>
+    <div>
+      {/* <Login /> */}
+      <PropertyPhotos />
+    </div>
   );
 }
 
