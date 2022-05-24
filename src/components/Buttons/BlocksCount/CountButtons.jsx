@@ -2,18 +2,24 @@ import { useState } from 'react';
 import { ButtonGroup, Button } from '@mui/material';
 import styles from './styles.module.css';
 
-function CountButtons() {
+function CountButtons(props) {
   const [count, setCount] = useState(0);
+  // eslint-disable-next-line react/prop-types
+  const { blockUpdate } = props;
 
-  const handleAdd = () => (
-    setCount(count + 1)
-  );
-  const handleMinus = () => (
-    setCount(count - 1)
-  );
-  const handleReset = () => (
-    setCount(0)
-  );
+  const handleAdd = () => {
+    setCount(count + 1);
+    blockUpdate((count + 1) * 1000000);
+  };
+  const handleMinus = () => {
+    setCount(count - 1);
+    blockUpdate((count - 1) * 1000000);
+  };
+
+  const handleReset = () => {
+    setCount(0);
+    blockUpdate(0);
+  };
 
   return (
     <div className={styles.counter_container}>

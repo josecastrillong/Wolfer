@@ -1,3 +1,7 @@
+import {
+  Routes,
+  Route,
+} from 'react-router-dom';
 import './App.css';
 // import Login from './pages/login/Login';
 import PropertyPhotos from './components/PropertyPhotos/PropertyPhotos';
@@ -7,13 +11,12 @@ import InvestCard from './components/InvestCard/InvestCard';
 
 function App() {
   return (
-    <div>
-      {/* <Login /> */}
-      <PropertyPhotos />
-      <PropertyReview />
-      <CountButtons />
-      <InvestCard />
-    </div>
+    <Routes>
+      <Route path="/InvestCard" element={<InvestCard />} />
+      <Route path="/PropertyPhotos" element={<PropertyPhotos />} />
+      <Route path="/PropertyReview" element={<PropertyReview />} />
+      <Route path="/CountButtons" element={<CountButtons />} />
+    </Routes>
   );
 }
 

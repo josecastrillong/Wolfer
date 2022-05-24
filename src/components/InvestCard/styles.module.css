@@ -1,0 +1,27 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  border: 0px  solid #274684;
+  border-radius:1rem;
+  max-width: 22rem;
+  padding: 2rem;
+}
+.invest_info{
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+.block_value {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  column-gap: 3rem;
+}
+.block_price {
+  align-self: left;
+  width: 8rem;
+}
