@@ -9,6 +9,7 @@
   border-radius:1rem;
   max-width: 22rem;
   padding: 2rem;
+  margin: auto;
 }
 .invest_info{
   display: flex;
