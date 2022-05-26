@@ -1,0 +1,30 @@
+@media (max-width: 1024px) {
+  .property {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+  .section_wraper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section_wraper {
+    display: flex;
+    flex-direction: row;
+    column-gap: 5rem;
+    padding: 2rem;
+  }
+  .property_review{
+    width: 60%;
+    
+  }
+  .property_invest{
+    margin-top: 4rem;
+    width: 40%;
+  }
+}
