@@ -9,10 +9,12 @@ import PropertyReview from './components/PropertyReview/PropertyReview';
 import CountButtons from './components/Buttons/BlocksCount/CountButtons';
 import InvestCard from './components/InvestCard/InvestCard';
 import Property from './pages/Property/Property';
+import Contract from './pages/PDF/PDF';
 
 function App() {
   return (
     <Routes>
+      <Route path="/contract" element={<Contract />} />
       <Route path="/" element={<Property />} />
       <Route path="/InvestCard" element={<InvestCard />} />
       <Route path="/PropertyPhotos" element={<PropertyPhotos />} />
