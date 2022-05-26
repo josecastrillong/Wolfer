@@ -1,0 +1,10 @@
+.PropertyReview {
+  padding: 2rem;
+  width: 100%;
+}
+  .info_section{
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    column-gap: 2rem;
+  }
