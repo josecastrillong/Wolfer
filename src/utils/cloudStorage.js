@@ -1,6 +1,7 @@
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
+import app from './ConfigFirebase';
 
-const storage = getStorage();
+const storage = getStorage(app);
 
 // Create the file metadata
 /** @type {any} */
@@ -55,3 +56,7 @@ uploadTask.on(
     });
   },
 );
+
+export default {
+  storage,
+};
