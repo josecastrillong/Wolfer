@@ -1,9 +1,11 @@
+/* eslint-disable react/jsx-no-bind */
 import InputLabel from '@mui/material/InputLabel';
+import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
+import { v4 } from 'uuid';
 import { useState } from 'react';
-import { Input } from '@mui/material';
-import SubmitButton from '../Buttons/Submit/SubmitButton';
+import { Input, Button } from '@mui/material';
+import { storage } from '../../utils/ConfigFirebase';
 import styles from './styles.module.css';
-import 
 
 function UploadFile() {
   const [file, setFile] = useState(null);
@@ -11,16 +13,20 @@ function UploadFile() {
   const handleFileChange = (e) => {
     setFile(e.target.files[0]);
   };
+  console.log(file);
 
-  async function handleUpload() {
+  const handleUpload = async () => {
     try {
       if (!file) {
-        throw new Error('No file selected');
-      }else
-      
+        throw new Error('No se ha seleccionado ningun archivo');
+      }
+      const fileName = `${document + v4()}`;
+      const fileRef = ref(storage, `imagesId/${fileName}`);
+      await uploadBytes(fileRef, file);
     } catch (error) {
-      
+      console.error(error);
     }
+  };
 
   return (
     <div className={styles.container}>
@@ -29,11 +35,16 @@ function UploadFile() {
         type="file"
         name="file"
         id="file"
-        accept="image/*"
         multiple={false}
         onChange={handleFileChange}
       />
-      <SubmitButton onClick={handleUpload} />
+      <Button
+        variant="contained"
+        color="primary"
+        onClick={handleUpload}
+      >
+        Enviar
+      </Button>
     </div>
 
   );
