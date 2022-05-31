@@ -1,11 +1,13 @@
 import PropertyPhotos from '../../components/PropertyPhotos/PropertyPhotos';
 import PropertyReview from '../../components/PropertyReview/PropertyReview';
 import InvestCard from '../../components/InvestCard/InvestCard';
+import Navbar from '../../components/Navbar/Navbar';
 import styles from './styles.module.css';
 
 function Property() {
   return (
     <div className={styles.property}>
+      <Navbar />
       <div className={styles.property_photos}>
         <PropertyPhotos />
       </div>

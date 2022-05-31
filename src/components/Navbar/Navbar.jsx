@@ -9,35 +9,33 @@ function Navbar() {
   const menuClass = open ? styles.linksOpen : styles.linksClose;
 
   return (
-    <>
-      <nav className={styles.nav}>
-        <div className={styles.logo}>
-          Logo
+    <nav className={styles.nav}>
+      <div className={styles.logo}>
+        Logo
+      </div>
+      <div className={styles.links}>
+        <div
+          onClick={handleOpen}
+          onKeyPress={handleOpen}
+          role="button"
+          tabIndex="0"
+          className={styles.menuButton}
+        >
+          <MenuIcon />
         </div>
-        <div className={styles.links}>
-          <div
-            onClick={handleOpen}
-            onKeyPress={handleOpen}
-            role="button"
-            tabIndex="0"
-            className={styles.menuButon}
-          >
-            <MenuIcon />
+        <div className={menuClass}>
+          <div className={styles.link}>
+            Sobre Wolfer
+          </div>
+          <div className={styles.link}>
+            Contacto
+          </div>
+          <div className={styles.link}>
+            Iniciar Sesión
           </div>
         </div>
-      </nav>
-      <div className={menuClass}>
-        <div className={styles.link}>
-          Sobre Wolfer
-        </div>
-        <div className={styles.link}>
-          Contacto
-        </div>
-        <div className={styles.link}>
-          Iniciar Sesión
-        </div>
       </div>
-    </>
+    </nav>
 
   );
 }
