@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-no-bind */
 import InputLabel from '@mui/material/InputLabel';
-import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
+import { ref, uploadBytes } from 'firebase/storage';
 import { v4 } from 'uuid';
 import { useState } from 'react';
 import { Input, Button } from '@mui/material';

@@ -10,10 +10,12 @@ import CountButtons from './components/Buttons/BlocksCount/CountButtons';
 import InvestCard from './components/InvestCard/InvestCard';
 import Property from './pages/Property/Property';
 import ContractPage from './pages/Contract/Contract';
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
   return (
     <Routes>
+      <Route path="/navbar" element={<Navbar />} />
       <Route path="/contract" element={<ContractPage />} />
       <Route path="/" element={<Property />} />
       <Route path="/InvestCard" element={<InvestCard />} />

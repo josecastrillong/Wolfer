@@ -1,0 +1,28 @@
+@media (max-width: 768px){
+  .nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 8vh;
+    width: 100vw;
+    align-content: center;
+    align-items: center;
+  }
+  .linksClose{
+    display: none;
+  }
+  .linksOpen{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 100vw;
+    background-color: antiquewhite;
+  }
+  .link{
+    height:4rem;
+    display: flex;
+    align-items: center;
+  }
+}
+
