@@ -1,0 +1,5 @@
+.first_section {
+  background-image: url("./modern_kitchen.jpg"); 
+  background-size: cover;
+  min-height: 37rem;
+}

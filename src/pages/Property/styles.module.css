@@ -10,6 +10,13 @@
     row-gap: 4rem;
     width: 100%;
   }
+  .nav{
+    width: 100vw;
+  }
+  .navigation_bar{
+    width:80%;
+    margin:0 auto;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -26,5 +33,9 @@
   .property_invest{
     margin-top: 4rem;
     width: 40%;
+  }
+  .navigation_bar{
+    width:80%;
+    margin:0 auto;
   }
 }
