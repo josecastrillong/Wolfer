@@ -4,18 +4,18 @@ import styles from './styles.module.css';
 function Home() {
   return (
     <div>
-      <header>
+      <header className={styles.nav}>
         <Navbar />
       </header>
       <main>
         <section>
           <div className={styles.first_section}>
-            <h1>Welcome to the Home Page</h1>
+            <h1>Hola Mundo</h1>
           </div>
         </section>
         <section>
           <div>
-            <h2>What is this?</h2>
+            <h2>Lorem ipsum, dolor sit amet consecteturcupiditate ipsum eum doloribus minus rem</h2>
           </div>
         </section>
       </main>
