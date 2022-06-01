@@ -1,4 +1,5 @@
 import Navbar from '../../components/Navbar/Navbar';
+import CardAction from '../../components/CardAction/CardAction';
 import styles from './styles.module.css';
 
 function Home() {
@@ -15,7 +16,7 @@ function Home() {
         </section>
         <section>
           <div>
-            <h2>Lorem ipsum, dolor sit amet consecteturcupiditate ipsum eum doloribus minus rem</h2>
+            <CardAction />
           </div>
         </section>
       </main>
