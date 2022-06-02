@@ -1,5 +1,6 @@
 import Navbar from '../../components/Navbar/Navbar';
 import CardAction from '../../components/CardAction/CardAction';
+import Footer from '../../components/Footer/Footer';
 import styles from './styles.module.css';
 
 function Home() {
@@ -20,9 +21,7 @@ function Home() {
           </div>
         </section>
       </main>
-      <footer>
-        <p>Footer</p>
-      </footer>
+      <Footer />
     </div>
   );
 }

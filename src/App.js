@@ -12,10 +12,12 @@ import Property from './pages/Property/Property';
 import ContractPage from './pages/Contract/Contract';
 import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home/Home';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
     <Routes>
+      <Route path="/footer" element={<Footer />} />
       <Route path="/home" element={<Home />} />
       <Route path="/navbar" element={<Navbar />} />
       <Route path="/contract" element={<ContractPage />} />
