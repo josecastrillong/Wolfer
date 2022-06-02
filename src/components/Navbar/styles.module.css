@@ -3,10 +3,11 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 8vh;
-    width: 80%;
+    height: 10vh;
+    width: 100%;
     align-content: center;
     align-items: center;
+    margin-top: 0;
   }
   .linksClose{
     display: none;

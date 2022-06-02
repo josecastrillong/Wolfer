@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import Navbar from '../../components/Navbar/Navbar';
 import CardAction from '../../components/CardAction/CardAction';
 import Footer from '../../components/Footer/Footer';
@@ -12,7 +13,7 @@ function Home() {
       <main>
         <section>
           <div className={styles.first_section}>
-            <h1>Hola Mundo</h1>
+            <p className={styles.text}>Tú oportunidad para invertir en propiedad raíz comprando bloques desde 2.000.000 de pesos</p>
           </div>
         </section>
         <section>
