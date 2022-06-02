@@ -1,27 +1,28 @@
+/* eslint-disable max-len */
 import Navbar from '../../components/Navbar/Navbar';
+import CardAction from '../../components/CardAction/CardAction';
+import Footer from '../../components/Footer/Footer';
 import styles from './styles.module.css';
 
 function Home() {
   return (
     <div>
-      <header>
+      <header className={styles.nav}>
         <Navbar />
       </header>
       <main>
         <section>
           <div className={styles.first_section}>
-            <h1>Welcome to the Home Page</h1>
+            <p className={styles.text}>Tú oportunidad para invertir en propiedad raíz comprando bloques desde 2.000.000 de pesos</p>
           </div>
         </section>
         <section>
           <div>
-            <h2>What is this?</h2>
+            <CardAction />
           </div>
         </section>
       </main>
-      <footer>
-        <p>Footer</p>
-      </footer>
+      <Footer />
     </div>
   );
 }
