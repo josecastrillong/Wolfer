@@ -3,7 +3,7 @@ import {
   Route,
 } from 'react-router-dom';
 import './App.css';
-// import Login from './pages/login/Login';
+import Login from './pages/Login/Login';
 import PropertyPhotos from './components/PropertyPhotos/PropertyPhotos';
 import PropertyReview from './components/PropertyReview/PropertyReview';
 import CountButtons from './components/Buttons/BlocksCount/CountButtons';
@@ -17,6 +17,7 @@ import Footer from './components/Footer/Footer';
 function App() {
   return (
     <Routes>
+      <Route path="/login" element={<Login />} />
       <Route path="/footer" element={<Footer />} />
       <Route path="/home" element={<Home />} />
       <Route path="/navbar" element={<Navbar />} />
