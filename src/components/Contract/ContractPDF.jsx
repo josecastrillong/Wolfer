@@ -15,7 +15,6 @@ const styleMU = StyleSheet.create({
     backgroundColor: '#ffffff',
     color: '#000000',
     fontFamily: 'Helvetica',
-    padding: 20,
   },
   title: {
     margin: 10,
@@ -28,8 +27,8 @@ const styleMU = StyleSheet.create({
     textAlign: 'justify',
   },
   viewer: {
-    Width: '80%',
-    Height: '100%',
+    width: '100%',
+    height: '100%',
   },
 });
 
@@ -61,7 +60,7 @@ function Contract() {
             </View>
             <View style={styleMU.text}>
               <Text>
-                Este contrato se generó en a fecha
+                Este contrato se generó en la fecha
                 {' '}
                 {date.toLocaleDateString()}
               </Text>

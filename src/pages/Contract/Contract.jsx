@@ -1,5 +1,6 @@
 import Contract from '../../components/Contract/ContractPDF';
 import UploadFile from '../../components/UploadFile/UploadFile';
+import PayPalButton from '../../components/Payment/Payment';
 import styles from './styles.module.css';
 
 function ContractPage() {
@@ -10,6 +11,9 @@ function ContractPage() {
       </div>
       <div className={styles.uploadID}>
         <UploadFile />
+      </div>
+      <div className={styles.paypal}>
+        <PayPalButton />
       </div>
     </div>
   );
