@@ -1,5 +1,13 @@
-.contract {
+.container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  min-width: 375px;
+  width: 100%;
+  gap: 5rem;
+}
+
+.contract {
+  width:70%;
+  height: 800px;
 }

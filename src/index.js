@@ -1,13 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
+import { PayPalScriptProvider } from '@paypal/react-paypal-js';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+const initialOptions = {
+  'client-id': 'test',
+  currency: 'USD',
+  intent: 'capture',
+};
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-    <App />
+    <PayPalScriptProvider options={initialOptions}>
+      <App />
+    </PayPalScriptProvider>
   </BrowserRouter>,
 );
 
