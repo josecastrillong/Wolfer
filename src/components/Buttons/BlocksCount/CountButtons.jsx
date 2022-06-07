@@ -1,6 +1,6 @@
 import { useRecoilState } from 'recoil';
 import { ButtonGroup, Button } from '@mui/material';
-import block from '../../../recoil/atom';
+import { block } from '../../../recoil/atom';
 import styles from './styles.module.css';
 
 function CountButtons() {

@@ -3,6 +3,7 @@ import React from 'react';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
+import styles from './styles.module.css';
 
 // Configure Firebase.
 const config = {
@@ -20,7 +21,7 @@ firebase.initializeApp(config);
 const uiConfig = {
   // Popup signin flow rather than redirect flow.
   signInFlow: 'popup',
-  signInSuccessUrl: '/signedIn',
+  signInSuccessUrl: '/contract',
   // We will display Google and Facebook as auth providers.
   signInOptions: [
     firebase.auth.EmailAuthProvider.PROVIDER_ID,
@@ -30,7 +31,7 @@ const uiConfig = {
 
 function Login() {
   return (
-    <div>
+    <div className={styles.login_container}>
       <h1>My App</h1>
       <p>Please sign-in:</p>
       <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />

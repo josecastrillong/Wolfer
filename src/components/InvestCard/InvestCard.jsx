@@ -2,7 +2,7 @@ import { useRecoilValue } from 'recoil';
 import InvestButton from '../Buttons/Invest/Invest';
 // eslint-disable-next-line import/no-named-as-default
 import CountButtons from '../Buttons/BlocksCount/CountButtons';
-import block from '../../recoil/atom';
+import { block } from '../../recoil/atom';
 import styles from './styles.module.css';
 
 function InvestCard() {

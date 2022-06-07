@@ -5,4 +5,9 @@ const block = atom({
   default: 0,
 });
 
-export default block;
+const docUpload = atom({
+  key: 'docUploadState',
+  default: false,
+});
+
+export { block, docUpload };
