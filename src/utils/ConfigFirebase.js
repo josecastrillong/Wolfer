@@ -14,7 +14,7 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const storage = getStorage(app, process.env.REACT_APP_FIREBASE_STORAGE_BUCKET);
+const storage = getStorage(app, 'wolfer-8d259.appspot.com');
 const db = getFirestore(app);
 
 export {
