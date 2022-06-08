@@ -17,6 +17,8 @@ const config = {
 };
 firebase.initializeApp(config);
 
+const app = firebase.initializeApp(config);
+
 // Configure FirebaseUI.
 const uiConfig = {
   // Popup signin flow rather than redirect flow.
@@ -37,7 +39,7 @@ function Login() {
     <div className={styles.login_container}>
       <div className={styles.login_content}>
         <h1>Inicia sesión</h1>
-        <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />
+        <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth(app)} />
       </div>
     </div>
   );
