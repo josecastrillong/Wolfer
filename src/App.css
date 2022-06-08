@@ -2,6 +2,5 @@ body{
   font-size: 18px;
   font-family: 'Noto Serif', sans-serif;
   height: 100vh;
-  max-width: 76rem;
-  margin:auto;
+  width: 100vw;
 }

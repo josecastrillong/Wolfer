@@ -1,16 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
+import { PayPalScriptProvider } from '@paypal/react-paypal-js';
+import { RecoilRoot } from 'recoil';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const initialOptions = {
+  'client-id': 'test',
+  currency: 'USD',
+  intent: 'capture',
+};
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>,
+  <BrowserRouter>
+    <RecoilRoot>
+      <PayPalScriptProvider options={initialOptions}>
+        <App />
+      </PayPalScriptProvider>
+    </RecoilRoot>
+  </BrowserRouter>,
 );
 
 // If you want to start measuring performance in your app, pass a function
