@@ -57,7 +57,7 @@ function ActionAreaCard() {
                 Casa
               </Typography>
               <Typography variant="subtitle1" color="text.secondary">
-                Vivienda que goza de increíbles vistas sobre la ciudad y se encuentra solo a poca distancia de colegios, tiendas y restaurantes
+                Vivienda que goza de increíbles vistas sobre la ciudad y se encuentra solo a poca distancia de colegios, tiendas y restaurantes.
               </Typography>
             </CardContent>
           </CardActionArea>
