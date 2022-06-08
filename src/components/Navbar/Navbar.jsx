@@ -1,6 +1,7 @@
-// import { NavLink } from 'react-router-dom';
-import { useState } from 'react';
+import { ref, getDownloadURL } from 'firebase/storage';
+import { useState, useEffect } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
+import { storage } from '../../utils/ConfigFirebase';
 import styles from './styles.module.css';
 
 function Navbar() {
@@ -8,10 +9,26 @@ function Navbar() {
   const handleOpen = () => setOpen(!open);
   const menuClass = open ? styles.linksOpen : styles.linksClose;
 
+  const pathReference = ref(storage, 'logos/logo_blanco.png');
+  const [url, setUrl] = useState('');
+
+  const getUrl = async () => {
+    try {
+      const fetchUrl = await getDownloadURL(pathReference);
+      setUrl(fetchUrl);
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
+
+  useEffect(() => {
+    getUrl();
+  }, []);
+
   return (
     <nav className={styles.nav}>
-      <div className={styles.logo}>
-        Logo
+      <div className={styles.logo_container}>
+        <img className={styles.logo} src={url} alt="logo" />
       </div>
       <div className={styles.links}>
         <div

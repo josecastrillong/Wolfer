@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import { ref, listAll, getDownloadURL } from 'firebase/storage';
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { storage } from '../../utils/ConfigFirebase';
 import styles from './styles.module.css';
 
@@ -29,8 +30,19 @@ function ActionAreaCard() {
     urls();
   }, []);
 
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate('/property');
+  };
+
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      onClick={handleClick}
+      role="button"
+      onKeyDown={handleClick}
+      tabIndex="0"
+    >
       {list.map((url) => (
         <Card sx={{ maxWidth: 320 }}>
           <CardActionArea>
