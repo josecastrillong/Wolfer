@@ -1,24 +1,20 @@
-import { useState } from 'react';
+import { useRecoilState } from 'recoil';
 import { ButtonGroup, Button } from '@mui/material';
+import { block } from '../../../recoil/atom';
 import styles from './styles.module.css';
 
-function CountButtons(props) {
-  const [count, setCount] = useState(0);
-  // eslint-disable-next-line react/prop-types
-  const { blockUpdate } = props;
+function CountButtons() {
+  const [blocks, setBlocks] = useRecoilState(block);
 
   const handleAdd = () => {
-    setCount(count + 1);
-    blockUpdate((count + 1) * 1000000);
+    setBlocks((blocks + 1));
   };
   const handleMinus = () => {
-    setCount(count - 1);
-    blockUpdate((count - 1) * 1000000);
+    setBlocks((blocks - 1));
   };
 
   const handleReset = () => {
-    setCount(0);
-    blockUpdate(0);
+    setBlocks(0);
   };
 
   return (
@@ -26,7 +22,7 @@ function CountButtons(props) {
       <span className={styles.counter_text}>
         {' '}
         Bloques:
-        {count}
+        {blocks}
       </span>
       <ButtonGroup variant="contained" aria-label="outlined primary button group">
         <Button onClick={handleAdd}>+</Button>

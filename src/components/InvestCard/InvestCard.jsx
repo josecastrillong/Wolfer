@@ -1,17 +1,19 @@
-import { useState } from 'react';
+import { useRecoilValue } from 'recoil';
 import InvestButton from '../Buttons/Invest/Invest';
 // eslint-disable-next-line import/no-named-as-default
 import CountButtons from '../Buttons/BlocksCount/CountButtons';
+import { block } from '../../recoil/atom';
 import styles from './styles.module.css';
 
 function InvestCard() {
-  const [blocks, setBlocks] = useState(0);
-  const number = blocks.toLocaleString();
+  const blocks = useRecoilValue(block);
+  let number = blocks * 1000000;
+  number = number.toLocaleString();
 
   return (
     <div className={styles.container}>
       <div className={styles.counter_buttons}>
-        <CountButtons blockUpdate={setBlocks} />
+        <CountButtons />
       </div>
       <div className={styles.invest_info}>
         <div className={styles.block_value}>

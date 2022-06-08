@@ -2,6 +2,7 @@ import PropertyPhotos from '../../components/PropertyPhotos/PropertyPhotos';
 import PropertyReview from '../../components/PropertyReview/PropertyReview';
 import InvestCard from '../../components/InvestCard/InvestCard';
 import Navbar from '../../components/Navbar/Navbar';
+import Footer from '../../components/Footer/Footer';
 import styles from './styles.module.css';
 
 function Property() {
@@ -23,6 +24,9 @@ function Property() {
           </div>
         </div>
       </div>
+      <footer className={styles.footer}>
+        <Footer />
+      </footer>
     </div>
   );
 }

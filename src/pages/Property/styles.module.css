@@ -20,11 +20,18 @@
 }
 
 @media (min-width: 1024px) {
+  .container {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    row-gap: 2rem;
+  }
   .section_wraper {
     display: flex;
     flex-direction: row;
     column-gap: 5rem;
     padding: 2rem;
+    max-width: 1200px;
   }
   .property_review{
     width: 60%;
@@ -37,5 +44,8 @@
   .navigation_bar{
     width:80%;
     margin:0 auto;
+  }
+  .footer{
+    width: 100vw;
   }
 }
