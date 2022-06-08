@@ -18,6 +18,7 @@ const storage = getStorage(app, 'wolfer-8d259.appspot.com');
 const db = getFirestore(app);
 
 export {
+  firebaseConfig,
   storage,
   db,
   app,
